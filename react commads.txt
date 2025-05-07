@@ -1,0 +1,62 @@
+1. install react from vite : https://vite.dev/guide/  
+	command: npm create vite@latest my-app
+		cd my-app
+		npm i 
+		npm run dev
+
+2. install react from create react app : https://legacy.reactjs.org/docs/create-a-new-react-app.html 
+	commands: npx create-react-app my-app
+		cd my-app
+		npm start
+
+3. tailwind css setup for create react app setup : https://v3.tailwindcss.com/docs/guides/create-react-app
+	commands :
+		1. Install tailwind css 
+			npm install -D tailwindcss@3
+			npx tailwindcss init
+
+		2.Configure your template paths: 
+		Add the paths to all of your template files in your tailwind.config.js file.	
+	
+		/** @type {import('tailwindcss').Config} */
+		module.exports = {
+  			content: [
+    			"./src/**/*.{js,jsx,ts,tsx}",
+  			],
+  		theme: {
+    			extend: {},
+  		},
+  		plugins: [],
+		}
+
+		3. Add the Tailwind directives to your CSS
+		Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+			
+		paste the code :
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+		5. Start your build process
+Run your build process with npm run start.
+
+
+
+
+
+
+4. vs code snippets: 
+	1. create a react component : rafce (react arrow function)
+	
+
+5. react fragements <> </> empty tags 
+
+	
+
+6.mysql 
+
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p -D database_name
+
+7: npm i cors
+import cors from "cors"
+    app.use(cors())

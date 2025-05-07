@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery DOM Manipulation Practical</title>
+
+  <!-- ✅ Importing jQuery library from CDN (needed to use jQuery functions) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #contentBox {
+      background: lightblue;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* ✅ Responsive style for smaller screens using media query */
+    @media (max-width: 600px) {
+      #contentBox {
+        font-size: 14px;
+        padding: 10px;
+        background-color: lightcoral;
+      }
+
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>jQuery DOM Practical</h2>
+
+  <!-- ✅ This is the content area we will manipulate -->
+  <div id="contentBox">Hello Welcome This is your jQuery content box.</div>
+
+  <br>
+
+  <!-- ✅ Buttons to trigger different jQuery actions -->
+  <button id="changeText">Change Text</button>
+  <button id="changeColor">Change Color</button>
+  <button id="hideText">Hide/Show Text</button>
+  <button id="increaseSize">Increase Font Size</button>
+  <button id="addText">Add More Text</button>
+
+  <script>
+    // ✅ Run the code only after the page is fully loaded
+    $(document).ready(function() {
+
+      // ✅ 1. Change text when the button is clicked
+      $("#changeText").click(function() {
+        $("#contentBox").text("Text changed using jQuery!");
+      });
+
+      // ✅ 2. Change text color to green
+      $("#changeColor").click(function() {
+        $("#contentBox").css("color", "green");
+      });
+
+      // ✅ 3. Toggle visibility of the contentBox using slideToggle
+      $("#hideText").click(function() {
+        $("#contentBox").slideToggle();
+      });
+
+      // ✅ 4. Increase font size using css() method
+      $("#increaseSize").click(function() {
+        $("#contentBox").css("font-size", "24px");
+      });
+
+      // ✅ 5. Add more content using append()
+      $("#addText").click(function() {
+        $("#contentBox").append("<br><b>New text added using jQuery append()</b>");
+      });
+
+    });
+  </script>
+
+</body>
+</html>

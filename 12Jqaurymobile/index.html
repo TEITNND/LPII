@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple jQuery Mobile Page</title>
+
+  <!-- ✅ jQuery Mobile CSS CDN -->
+  <!-- The link to the jQuery Mobile CSS stylesheet to style the page elements and ensure they are mobile-friendly. -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- ✅ jQuery Core -->
+  <!-- The core jQuery library that provides functionality for DOM manipulation and event handling. -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- ✅ jQuery Mobile JS -->
+  <!-- The jQuery Mobile JavaScript library that enables mobile-specific features, transitions, and AJAX page loading. -->
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    /* Custom CSS to style the content */
+    .custom-content {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ Page Container -->
+<!-- A page is defined using the data-role="page" attribute. Each "page" can be a separate screen or section in the app. -->
+<div data-role="page" id="homePage">
+
+  <!-- ✅ Header -->
+  <!-- The header section is defined using data-role="header". It provides a title or navigation for the page. -->
+  <div data-role="header" data-theme="b">
+    <h1>Welcome</h1>
+  </div>
+
+  <!-- ✅ Main Content -->
+  <!-- The main content of the page goes inside data-role="content". It's where you put the main body of the page. -->
+  <div data-role="content" class="custom-content">
+    <h2>Hello </h2>
+    <p>This is a simple jQuery Mobile Web Page.</p>
+    
+    <!-- ✅ Button with navigation -->
+    <!-- The 'Go to About Page' link is styled as a button using data-role="button". 
+         It also links to the "About Page" (id="aboutPage") when clicked. -->
+    <a href="#aboutPage" data-role="button" data-theme="a">Go to About Page</a>
+  </div>
+
+  <!-- ✅ Footer -->
+  <!-- The footer is defined using data-role="footer". It's typically used for navigation or small information like copyright. -->
+  <div data-role="footer" data-theme="b">
+    <h4>&copy; 2025 nikil</h4>
+  </div>
+
+</div> <!-- End of homePage -->
+
+<!-- ✅ Second Page (About Page) -->
+<!-- This is another page in the same document. When the user clicks on the "Go to About Page" link, 
+     this page will be shown due to the page transition feature in jQuery Mobile. -->
+<div data-role="page" id="aboutPage">
+
+  <!-- ✅ Header for the About Page -->
+  <div data-role="header" data-theme="b">
+    <h1>About</h1>
+  </div>
+
+  <!-- ✅ Main Content of About Page -->
+  <div data-role="content" class="custom-content">
+    <p>This is the About section. jQuery Mobile allows easy page transitions.</p>
+    <!-- ✅ Back Button -->
+    <!-- The 'Back to Home' button links back to the homePage when clicked. -->
+    <a href="#homePage" data-role="button" data-theme="a">Back to Home</a>
+  </div>
+
+  <!-- ✅ Footer for the About Page -->
+  <div data-role="footer" data-theme="b">
+    <h4>Thank you</h4>
+  </div>
+
+</div> <!-- End of aboutPage -->
+
+</body>
+</html>
